@@ -20,10 +20,10 @@ Imports:
     RUnit,
     hexbin
 Suggests:
-    rmarkdown
+    knitr
 biocViews: StatisticalMethod, GraphAndNetwork, Microarray, GeneRegulation,
     NetworkInference, GeneExpression, Transcription, Network
-VignetteBuilder: rmarkdown
+VignetteBuilder: knitr
 License: GPL-2
 LazyData: true
 RoxygenNote: 5.0.1
