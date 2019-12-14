@@ -5,6 +5,11 @@
 #' @docType package
 #' @name pandaR
 #' @importFrom RUnit checkTrue
+#' @importFrom graphics title
+#' @importFrom stats aggregate
+#' @importFrom stats cor 
+#' @importFrom stats pnorm
+#' @importFrom utils read.delim
 #' @import methods
 #' @import BiocGenerics
 NULL

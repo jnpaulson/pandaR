@@ -53,28 +53,3 @@ print.panda <- function(x, ...){
         message("Regulatory graph is not complete.")
     }
 }
-#' Plot.panda
-#'
-#' summarizes the results of a PANDA analysis
-#'
-#' @param x an object of class "panda"
-#' @param ... further arguments passed to or from other methods.
-#' @keywords keywords
-#' @export
-#' @return Plot of the distribution of edge weights in the regulatory network.
-#' @examples
-#' \donttest{
-#' data(pandaToyData)
-#' panda.res <- panda(pandaToyData$motif,
-#'            pandaToyData$expression,pandaToyData$ppi,hamming=.001,progress=TRUE)
-#' plot(panda.res)
-#' }
-#' data(pandaResult)
-#' plot(pandaResult)
-plot.panda <- function(x, ...){
-    message("PANDA network for ",nrow(x@coregNet)," genes and ",nrow(x@coopNet),"  transcription factors.")
-    message("Mean edge weight = ", mean(x@regNet))
-    message("Min edge weight = ", min(x@regNet))
-    message("Max edge weight = ", max(x@regNet))
-    hist(x@regNet, main="Distribution of edge weights")
-}
