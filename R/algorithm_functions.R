@@ -213,6 +213,9 @@ panda <- function(motif,expr=NULL,ppi=NULL,alpha=0.1,hamming=0.001,
 
 prepResult <- function(zScale, output, regulatoryNetwork, geneCoreg, tfCoopNetwork, edgelist, motif){
     resList <- list()
+    numGenes = dim(geneCoreg)[1]
+    numTFs   = dim(tfCoopNetwork)[1]
+    numEdges = sum(regulatoryNetwork!=0)
     if (!zScale){
         regulatoryNetwork <- pnorm(regulatoryNetwork)
         geneCoreg         <- pnorm(geneCoreg)
@@ -226,7 +229,7 @@ prepResult <- function(zScale, output, regulatoryNetwork, geneCoreg, tfCoopNetwo
       }
       resList$regNet <- regulatoryNetwork
     }
-    if("coregulatory"%in%output){
+    if("coexpression"%in%output){
       if(edgelist){
         geneCoreg <- melt.array(geneCoreg)
         colnames(geneCoreg) <- c("Gene.x", "Gene.y", "Score")
@@ -240,7 +243,7 @@ prepResult <- function(zScale, output, regulatoryNetwork, geneCoreg, tfCoopNetwo
       }
       resList$coopNet <- tfCoopNetwork
     }
-    pandaObj(regNet=regulatoryNetwork, coregNet=geneCoreg, coopNet=tfCoopNetwork)
+    pandaObj(regNet=regulatoryNetwork, coregNet=geneCoreg, coopNet=tfCoopNetwork, numGenes=numGenes, numTFs=numTFs, numEdges=numEdges)
 }
 
 normalizeNetwork<-function(X){

@@ -1,2 +1,2 @@
-pandaObj <- setClass("panda", slots=c("regNet","coregNet","coopNet"))
+pandaObj <- setClass("panda", slots=c("regNet","coregNet","coopNet","numGenes","numTFs","numEdges"))
 setMethod("show","panda",function(object){print.panda(object)})
