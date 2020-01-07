@@ -15,7 +15,6 @@
 #' summary(panda.res)
 #' }
 #' data(pandaResult)
-#' summary(pandaResult)
 summary.panda <- function(object, ...){
     l <- list(coregNet=dim(object@coregNet),regNet=dim(object@regNet),coopNet=dim(object@coopNet))
     message("PANDA network for ", object@numGenes," genes and ", object@numTFs," transcription factors.")
@@ -37,7 +36,6 @@ summary.panda <- function(object, ...){
 #' print(panda.res)
 #' }
 #' data(pandaResult)
-#' print(pandaResult)
 print.panda <- function(x, ...){
     l <- list(coregNet=dim(x@coregNet),regNet=dim(x@regNet),coopNet=dim(x@coopNet))
     message("PANDA network for", x@numGenes,"genes and", x@numTFs,"transcription factors.")

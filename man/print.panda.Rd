@@ -25,6 +25,5 @@ panda.res <- panda(pandaToyData$motif,
 print(panda.res)
 }
 data(pandaResult)
-print(pandaResult)
 }
 \keyword{keywords}
