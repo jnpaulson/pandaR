@@ -10,7 +10,7 @@ panda(motif, expr = NULL, ppi = NULL, alpha = 0.1, hamming = 0.001,
   "within.gene", "by.gene"), cor.method = "pearson",
   scale.by.present = FALSE, edgelist = FALSE,
   remove.missing.ppi = FALSE, remove.missing.motif = FALSE,
-  remove.missing.genes = FALSE)
+  remove.missing.genes = FALSE, mode = "union")
 }
 \arguments{
 \item{motif}{A motif dataset, a data.frame, matrix or exprSet containing 3 columns.
@@ -47,13 +47,18 @@ of the gene expression matrix, "by.gene" scrambles gene labels.}
 \item{edgelist}{Boolean to indicate if edge lists instead of matrices should be returned.}
 
 \item{remove.missing.ppi}{Boolean to indicate whether TFs in the PPI but not in the motif data should be
-removed.}
+removed. Only when mode=='legacy'.}
 
 \item{remove.missing.motif}{Boolean to indicate whether genes targeted in the motif data but not the
-expression data should be removed.}
+expression data should be removed. Only when mode=='legacy'.}
 
 \item{remove.missing.genes}{Boolean to indicate whether genes in the expression data but lacking
-information from the motif prior should be removed.}
+information from the motif prior should be removed. Only when mode=='legacy'.}
+
+\item{mode}{The data alignment mode. The mode 'union' takes the union of the genes in the expression matrix and the motif
+and the union of TFs in the ppi and motif and fills the matrics with zeros for nonintersecting TFs and gens, 'intersection' 
+takes the intersection of genes and TFs and removes nonintersecting sets, 'legacy' is the old behavior with version 1.19.3.
+#' Parameters remove.missing.ppi, remove.missingmotif, remove.missing.genes work only with mode=='legacy'.}
 }
 \value{
 An object of class "panda" containing matrices describing networks achieved by convergence
