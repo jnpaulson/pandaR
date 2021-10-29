@@ -1,8 +1,2 @@
 pandaObj <- setClass("panda", slots=c("regNet","coregNet","coopNet","numGenes","numTFs","numEdges"))
 setMethod("show","panda",function(object){print.panda(object)})
-setGeneric("get_regNet", function(object) standardGeneric("get_regNet"))
-setGeneric("get_coregNet", function(object) standardGeneric("get_coregNet"))
-setGeneric("get_coopNet", function(object) standardGeneric("get_coopNet"))
-setMethod("get_regNet", "panda", function(object) object@regNet)
-setMethod("get_coregNet", "panda", function(object) object@coregNet)
-setMethod("get_coopNet", "panda", function(object) object@coopNet)
