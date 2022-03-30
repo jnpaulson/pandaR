@@ -1,3 +1,51 @@
+#' getRegNet
+#'
+#' acessor for RegNet in PANDA object
+#'
+#' @param x an object of class "PANDA"
+#' @export
+#' @return Regulatory Network
+#' @examples
+#' data(yeast)
+#' pandaRes <- panda(pandaToyData$motif,
+#' pandaToyData$expression,pandaToyData$ppi,hamming=.5,progress=TRUE)
+#' regNet <- getRegNet(pandaRes)
+getRegNet <- function(x){
+  x@regNet
+}
+
+#' getCoRegNet
+#'
+#' acessor for CoRegNet in PANDA object
+#'
+#' @param x an object of class "PANDA"
+#' @export
+#' @return Co-Regulatory Network
+#' @examples
+#' data(yeast)
+#' pandaRes <- panda(pandaToyData$motif,
+#' pandaToyData$expression,pandaToyData$ppi,hamming=.5,progress=TRUE)
+#' coregNet <- getCoRegNet(pandaRes)
+getCoRegNet <- function(x){
+  x@coregNet
+}
+
+#' getCoopNet
+#'
+#' acessor for CoopNet in PANDA object
+#'
+#' @param x an object of class "PANDA"
+#' @export
+#' @return Cooperativity Network
+#' @examples
+#' data(yeast)
+#' pandaRes <- panda(pandaToyData$motif,
+#' pandaToyData$expression,pandaToyData$ppi,hamming=.5,progress=TRUE)
+#' coopNet <- getCoopNet(pandaRes)
+getCoopNet <- function(x){
+  x@coopNet
+}
+
 #' Passing Messages between Biological Networks to Refine Predicted Interactions
 #'
 #' This function runs the PANDA algorithm
