@@ -4,8 +4,16 @@
 \alias{testMotif}
 \title{Check motif}
 \usage{
-testMotif(x, motif, expr, ppi, mode = c("augment", "remove"),
-  prop = 0.05, seed = 1, ...)
+testMotif(
+  x,
+  motif,
+  expr,
+  ppi,
+  mode = c("augment", "remove"),
+  prop = 0.05,
+  seed = 1,
+  ...
+)
 }
 \arguments{
 \item{x}{Model regulatory network.}

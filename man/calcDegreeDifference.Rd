@@ -4,8 +4,14 @@
 \alias{calcDegreeDifference}
 \title{Calculate difference in degrees}
 \usage{
-calcDegreeDifference(x, y, type = c("tf", "gene"), filter = FALSE,
-  trim = FALSE, ...)
+calcDegreeDifference(
+  x,
+  y,
+  type = c("tf", "gene"),
+  filter = FALSE,
+  trim = FALSE,
+  ...
+)
 }
 \arguments{
 \item{x}{An object of class "panda" or matrix}
