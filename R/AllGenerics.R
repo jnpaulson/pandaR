@@ -27,6 +27,7 @@ summary.panda <- function(object, ...){
 #' @param ... further arguments passed to or from other methods.
 #' @keywords keywords
 #' @export
+#' @export print.panda
 #' @return Summary description of panda S4 object
 #' @examples
 #' \donttest{

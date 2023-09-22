@@ -4,13 +4,25 @@
 \alias{panda}
 \title{Passing Messages between Biological Networks to Refine Predicted Interactions}
 \usage{
-panda(motif, expr = NULL, ppi = NULL, alpha = 0.1, hamming = 0.001,
-  iter = NA, output = c("regulatory", "coexpression", "cooperative"),
-  zScale = TRUE, progress = FALSE, randomize = c("None",
-  "within.gene", "by.gene"), cor.method = "pearson",
-  scale.by.present = FALSE, edgelist = FALSE,
-  remove.missing.ppi = FALSE, remove.missing.motif = FALSE,
-  remove.missing.genes = FALSE, mode = "union")
+panda(
+  motif,
+  expr = NULL,
+  ppi = NULL,
+  alpha = 0.1,
+  hamming = 0.001,
+  iter = NA,
+  output = c("regulatory", "coexpression", "cooperative"),
+  zScale = TRUE,
+  progress = FALSE,
+  randomize = c("None", "within.gene", "by.gene"),
+  cor.method = "pearson",
+  scale.by.present = FALSE,
+  edgelist = FALSE,
+  remove.missing.ppi = FALSE,
+  remove.missing.motif = FALSE,
+  remove.missing.genes = FALSE,
+  mode = "union"
+)
 }
 \arguments{
 \item{motif}{A motif dataset, a data.frame, matrix or exprSet containing 3 columns.

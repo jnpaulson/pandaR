@@ -4,8 +4,12 @@
 \alias{topedges}
 \title{Top edges}
 \usage{
-topedges(x, count = NA, cutoff = 2, networks = c("coregulation",
-  "cooperation", "regulatory"))
+topedges(
+  x,
+  count = NA,
+  cutoff = 2,
+  networks = c("coregulation", "cooperation", "regulatory")
+)
 }
 \arguments{
 \item{x}{an object of class "panda"}

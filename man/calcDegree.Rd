@@ -4,8 +4,7 @@
 \alias{calcDegree}
 \title{Calculate regulatory network degree}
 \usage{
-calcDegree(x, type = c("tf", "gene"), filter = FALSE, trim = FALSE,
-  ...)
+calcDegree(x, type = c("tf", "gene"), filter = FALSE, trim = FALSE, ...)
 }
 \arguments{
 \item{x}{An object of class "panda" or matrix}

@@ -28,7 +28,7 @@ Imports the files from the \code{exportPanda.m} file.
  # to export the file
  networkfiles = list.files(pattern="numeric")
  write.table(indegree,paste("indegree_",networkfiles,sep=""),
-             sep="\\t",quote=F,row.names=T,col.names=T)
+             sep="\t",quote=F,row.names=T,col.names=T)
 }
 
 }
