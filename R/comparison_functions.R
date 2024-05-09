@@ -23,10 +23,10 @@
 #'
 calcDegree <- function(x,type=c("tf","gene"),filter=FALSE,trim=FALSE,...){
 	type = match.arg(type)
-    if( !(class(x)%in%c("panda","matrix")) ){
+    if( !(class(x)%in%c("panda","matrix","pandaObj")) ){
       stop(paste(sep="","Cannot run calcDegree on object of class '",class(x),"'.  Must be of class 'panda' or 'matrix'."))
     }
-    if(class(x)=="panda"){
+    if(class(x) in c("panda","pandaObj")){
     	if(trim==TRUE) x=topedges(x,...)
     	x = x@regNet
     }
